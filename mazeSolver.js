@@ -8,32 +8,36 @@ let actualRow = mazes.maze1.starRow
 let actualColumn = mazes.maze1.startColumn
 
 function solveMaze() {
-    if (mazeArray[actualRow][actualColumn] == s) {
+    maze = mazes.maze1.matrix
+    if (maze[actualRow][actualColumn] == s) {
         return path
     }
     else {
         move()
+        solveMaze()
     }
 }
 
 //this doesn't work :(
 function move() {
+    // TODO esto puede entrar en un loop infinito en el que no encuentra dead ends
+    // siempre va a poder volver a donde vino
     console.log(actualRow + ", " + actualColumn)
-    if (canMoveRight) {
+    if (canMoveRight()) {
         moveRight()
         console.log("derecha")
-    } else if (canMoveDown) {
+    } else if (canMoveDown()) {
         moveDown()
         console.log("abajo")
-    } else if (canMoveLeft) {
+    } else if (canMoveLeft()) {
         moveLeft()
         console.log("izquierda")
-    } else if (canMoveUp) {
+    } else if (canMoveUp()) {
         moveUp()
         console.log("arriba ")
     } else {
         // TODO chequear que pasa cuando entra acá
-        deadEnds.push([i, j])
+        deadEnds.push([actualRow, actualColumn])
     }
     return newPosition
 }
@@ -41,7 +45,7 @@ function move() {
 function canMoveRight(maze) {
 // TODO change this variable in all functions canMove (line 2 let maze = mazes.maze1.matrix) 
     maze = mazes.maze1.matrix
-    return (maze[actualRow][actualColumn + 1] == 0)
+    return (maze[actualRow][actualColumn + 1] == 0 || maze[actualRow][actualColumn + 1] == s)
 }
 
 function canMoveDown(maze) {
@@ -83,3 +87,4 @@ function addPositionToPath() {
     newPosition = [actualRow, actualColumn]
     return path.push([actualRow, actualColumn])
 }
+
