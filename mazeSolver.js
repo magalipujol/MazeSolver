@@ -1,5 +1,6 @@
 //TODO seleccionar un array aleatorio de mazes object
-// let maze = mazes.maze1.matrix
+let maze = mazes.maze1.matrix
+//TODO path tiene que tener la posicion de entrada y salida ya puestas
 let path = []
 let deadEnds = []
 // TODO check if I need a newPosition array, or if only a camino array it's okay
@@ -8,7 +9,6 @@ let actualRow = mazes.maze1.starRow
 let actualColumn = mazes.maze1.startColumn
 
 function solveMaze() {
-    maze = mazes.maze1.matrix
     if (maze[actualRow][actualColumn] == s) {
         return path
     }
@@ -42,24 +42,19 @@ function move() {
     return newPosition
 }
 
-function canMoveRight(maze) {
-// TODO change this variable in all functions canMove (line 2 let maze = mazes.maze1.matrix) 
-    maze = mazes.maze1.matrix
+function canMoveRight() {
     return (maze[actualRow][actualColumn + 1] == 0 || maze[actualRow][actualColumn + 1] == s)
 }
 
-function canMoveDown(maze) {
-    maze = mazes.maze1.matrix
+function canMoveDown() {
     return (maze[actualRow + 1][actualColumn] == 0)
 }
 
-function canMoveLeft(maze) {
-    maze = mazes.maze1.matrix
+function canMoveLeft() {
     return (maze[actualRow][actualColumn - 1] == 0)
 }
 
-function canMoveUp(maze) {
-    maze = mazes.maze1.matrix
+function canMoveUp() {
     return (maze[actualRow - 1][actualColumn] == 0)
 }
 
@@ -88,3 +83,8 @@ function addPositionToPath() {
     return path.push([actualRow, actualColumn])
 }
 
+// this function changes the number of the positions of the path
+// to avoid going back through the path
+function addPathToMaze() {
+
+}
