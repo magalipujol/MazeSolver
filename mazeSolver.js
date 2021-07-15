@@ -1,12 +1,11 @@
 //TODO seleccionar un array aleatorio de mazes object
 let maze = mazes.maze1.matrix
-//TODO path tiene que tener la posicion de entrada y salida ya puestas
-let path = [[actualRow, actualColumn]]
 let deadEnds = []
 // TODO check if I need a newPosition array, or if only a camino array it's okay
 let newPosition = []
 let actualRow = mazes.maze1.starRow
 let actualColumn = mazes.maze1.startColumn
+let path = [[actualRow, actualColumn]]
 
 // if the position is the same as the exit, the function returns the path
 // if not, the position changes, and check again if it's the exit
