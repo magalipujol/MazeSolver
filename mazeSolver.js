@@ -5,7 +5,7 @@ let deadEnds = []
 let newPosition = []
 let actualRow = mazes.maze1.starRow
 let actualColumn = mazes.maze1.startColumn
-let path = [[actualRow, actualColumn]]
+let path = [[actualRow, actualColumn]];
 
 // if the position is the same as the exit, the function returns the path
 // if not, the position changes, and check again if it's the exit
