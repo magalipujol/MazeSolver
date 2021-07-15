@@ -1,4 +1,43 @@
+/* color scheme */
+:root {
+    /* maze colors */
+    --walls: #264653;
+    --wrongPath: #e76f51;
+    --correctPath: #2a9d8f;
+    --empty: #f2da9d;
+    /* page colors */
+    --dark-blue: #264653;
+    --blue-green: #2a9d8f;
+    --mustard: #E9C46A;
+    --orange: #F4A261;
+    --burnt-sienna: #E76F51;
+
+}
+
 header {
-    color: red;
+    color: var(--dark-blue);
     text-transform: uppercase;
+}
+
+body {
+    font-family: monospace;
+}
+
+#maze, #maze1 {
+    max-width: 500px;
+    
+}
+
+p {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    border: 1px blue;
+    height: 10px;
+    width: 10px;
+}
+
+.grid-space{
+    background-color: blue;
 }
