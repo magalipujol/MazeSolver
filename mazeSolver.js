@@ -1,4 +1,4 @@
-let mazeObject = mazes.maze2
+let mazeObject = mazes.maze1
 //TODO seleccionar un array aleatorio de mazes object
 let maze = mazeObject.matrix
 let deadEnds = []
@@ -47,20 +47,20 @@ function move() {
 }
 
 function canMoveRight() {
-    return (maze[actualRow][actualColumn + 1] == 0 || maze[actualRow][actualColumn + 1] == s)
+    return (maze[actualRow][actualColumn + 1] == c || maze[actualRow][actualColumn + 1] == s)
 }
 
 // TODO tiene que quedar igual que canMoveRight
 function canMoveDown() {
-    return (maze[actualRow + 1][actualColumn] == 0)
+    return (maze[actualRow + 1][actualColumn] == c)
 }
 
 function canMoveLeft() {
-    return (maze[actualRow][actualColumn - 1] == 0)
+    return (maze[actualRow][actualColumn - 1] == c)
 }
 
 function canMoveUp() {
-    return (maze[actualRow - 1][actualColumn] == 0)
+    return (maze[actualRow - 1][actualColumn] == c)
 }
 
 function moveRight() {
@@ -96,7 +96,7 @@ function addPositionToPath() {
 // this function changes the number of the positions of the path
 // to avoid going back through the path
 function addPathToMaze() {
-    maze[actualRow][actualColumn] = 2
+    maze[actualRow][actualColumn] = p
     return maze
 }
 
