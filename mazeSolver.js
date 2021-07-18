@@ -1,10 +1,11 @@
+let mazeObject = mazes.maze2
 //TODO seleccionar un array aleatorio de mazes object
-let maze = mazes.maze1.matrix
+let maze = mazeObject.matrix
 let deadEnds = []
 // TODO check if I need a newPosition array, or if only a camino array it's okay
 let newPosition = []
-let actualRow = mazes.maze1.starRow
-let actualColumn = mazes.maze1.startColumn
+let actualRow = mazeObject.startRow
+let actualColumn = mazeObject.startColumn
 let path = [[actualRow, actualColumn]];
 
 // if the position is the same as the exit, the function returns the path
@@ -49,6 +50,7 @@ function canMoveRight() {
     return (maze[actualRow][actualColumn + 1] == 0 || maze[actualRow][actualColumn + 1] == s)
 }
 
+// TODO tiene que quedar igual que canMoveRight
 function canMoveDown() {
     return (maze[actualRow + 1][actualColumn] == 0)
 }
@@ -93,9 +95,9 @@ function addPositionToPath() {
 // When I uncomment this, "too much recursion" :(
 // this function changes the number of the positions of the path
 // to avoid going back through the path
-// function addPathToMaze() {
-//     maze[actualRow][actualColumn] = 2
-//     return maze
-// }
+function addPathToMaze() {
+    maze[actualRow][actualColumn] = 2
+    return maze
+}
 
 

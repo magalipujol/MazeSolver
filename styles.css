@@ -23,7 +23,7 @@ body {
     font-family: monospace;
 }
 
-#maze, #maze1 {
+.pure-g {
     max-width: 500px;
     
 }
@@ -38,6 +38,7 @@ p {
     width: 10px;
 }
 
-.grid-space{
+.pure-u-1-12 {
     background-color: blue;
+    
 }
