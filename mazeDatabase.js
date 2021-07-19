@@ -36,6 +36,21 @@ let mazes = {
         startColumn: 0,
         endRow: 5,
         endColumn: 6 
+    },
+    // three dead ends
+    maze3: {
+        matrix: [[w, w, w, w, w, w, w, w, w],
+                 [e, c, w, c, c, c, c, c, w],
+                 [w, c, w, c, w, c, w, w, w],
+                 [w, c, w, c, w, c, c, c, w],
+                 [w, c, c, c, w, w, c, w, w],
+                 [w, w, w, c, w, c, c, c, w],
+                 [w, c, c, c, w, c, w, c, s],
+                 [w, w, w, w, w, w, w, w, w]],
+        startRow: 1,
+        startColumn: 0,
+        endRow: 6,
+        endColumn: 8
     }
 }
 

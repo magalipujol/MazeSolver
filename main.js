@@ -49,4 +49,4 @@ function createDiv(className) {
     return newDiv
 }
 
- printMazeInHTML(mazes.maze2.matrix, 'maze')
+ printMazeInHTML(mazes.maze3.matrix, 'maze')

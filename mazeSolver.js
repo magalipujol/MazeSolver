@@ -1,4 +1,4 @@
-let mazeObject = mazes.maze2
+let mazeObject = mazes.maze3
 //TODO seleccionar un array aleatorio de mazes object
 let maze = mazeObject.matrix
 let deadEnds = []
