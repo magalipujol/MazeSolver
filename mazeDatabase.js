@@ -19,7 +19,9 @@ let mazes = {
              [w, c, c, c, w, c, s],
              [w, w, w, w, w, w, w]],
         startRow: 1,
-        startColumn: 0
+        startColumn: 0,
+        endRow: 5,
+        endColumn: 6 
     },
     // this maze has one dead end
     maze2: {
@@ -31,7 +33,9 @@ let mazes = {
                  [w, c, c, c, w, c, s],
                  [w, w, w, w, w, w, w]],
         startRow: 1,
-        startColumn: 0
+        startColumn: 0,
+        endRow: 5,
+        endColumn: 6 
     }
 }
 

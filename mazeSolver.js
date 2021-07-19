@@ -1,4 +1,4 @@
-let mazeObject = mazes.maze1
+let mazeObject = mazes.maze2
 //TODO seleccionar un array aleatorio de mazes object
 let maze = mazeObject.matrix
 let deadEnds = []
@@ -7,11 +7,13 @@ let newPosition = []
 let actualRow = mazeObject.startRow
 let actualColumn = mazeObject.startColumn
 let path = [[actualRow, actualColumn]];
+let finishRow = mazeObject.endRow
+let finishColumn = mazeObject.endColumn
 
 // if the position is the same as the exit, the function returns the path
 // if not, the position changes, and check again if it's the exit
 function solveMaze() {
-    if (maze[actualRow][actualColumn] == s) {
+    if (actualRow == finishRow && actualColumn == finishColumn) {
         return path
     }
     else {
@@ -88,13 +90,10 @@ function moveUp() {
 // Alto, it calls another function, addPathToMaze 
 function addPositionToPath() {
     newPosition = [actualRow, actualColumn]
-    // addPathToMaze()
+    addPathToMaze()
     return path.push([actualRow, actualColumn])
 }
 
-// When I uncomment this, "too much recursion" :(
-// this function changes the number of the positions of the path
-// to avoid going back through the path
 function addPathToMaze() {
     maze[actualRow][actualColumn] = p
     return maze

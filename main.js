@@ -1,45 +1,3 @@
-// for (let i = 0; i < mazes.maze1.matrix.length; i++) {
-//     var div = document.createElement('div')
-//     div.innerHTML += mazes.maze1.matrix.length[i]
-// }
-
-// document.getElementById("maze").appendChild(div)
-
-// let arrayOfRows = ["row1", "row2", "row3", "row4", "row5", "row6", 
-//                    "row7", "row8", "row9", "row10", "row11", "row12"]
-
-// let row1
-// let row2
-
-// let rows = []
-
-// for (let i = 0; i < )
-
-// var row1 = document.getElementById(arrayOfRows[0])
-// var row2 = document.getElementById(arrayOfRows[1])
-// var row3 = document.getElementById(arrayOfRows[2])
-// var row4 = document.getElementById(arrayOfRows[3])
-// var row5 = document.getElementById(arrayOfRows[4])
-// var row6 = document.getElementById(arrayOfRows[5])
-// var row7 = document.getElementById(arrayOfRows[6])
-
-// for (let i = 0; i < 2; i++) {
-//     arrayOfVars.push (document)
-// }
-
-// for (let rowIndex = 0; rowIndex = maze.length; rowIndex++) {
-    
-// }
-
-
-// function addRow (rowID, amount) {
-//     amount = 
-// }
-
-// function addColumns (amount) {
-
-// }
-
 function addColorToHTML(htmlObject, tileValue) {
     switch (tileValue) {
         // TODO me tengo que decidir si usar numeros o strings
@@ -91,4 +49,4 @@ function createDiv(className) {
     return newDiv
 }
 
- printMazeInHTML(mazes.maze1.matrix, 'maze')
+ printMazeInHTML(mazes.maze2.matrix, 'maze')
