@@ -1,4 +1,4 @@
-let mazeObject = mazes.maze3
+let mazeObject = mazes.maze1
 //TODO seleccionar un array aleatorio de mazes object
 let maze = mazeObject.matrix
 let deadEnds = []
@@ -24,7 +24,8 @@ function solveMaze(intento) {
     }
     else {
         move()
-        solveMaze(intento + 1)
+        setTimeout(() => solveMaze(intento + 1), 500)
+        
     }
 }
 

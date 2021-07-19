@@ -49,4 +49,13 @@ function createDiv(className) {
     return newDiv
 }
 
- printMazeInHTML(mazes.maze3.matrix, 'maze')
+ printMazeInHTML(mazes.maze1.matrix, 'maze')
+
+ const printMazeInLoop = setInterval(() => {
+   //this doesn't work
+    document.getElementById('iframeid').src = document.getElementById('iframeid').src
+    // printMazeInHTML(mazes.maze1.matrix, 'maze')
+    console.log("jeje")
+ }, 1000);
+
+ setTimeout(() => clearInterval(printMazeInLoop), 4000)
