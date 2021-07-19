@@ -10,15 +10,21 @@ let path = [[actualRow, actualColumn]];
 let finishRow = mazeObject.endRow
 let finishColumn = mazeObject.endColumn
 
+
+
 // if the position is the same as the exit, the function returns the path
 // if not, the position changes, and check again if it's the exit
-function solveMaze() {
+function solveMaze(intento) { 
+    if (intento == 1000) {
+        console.log("plop")
+        return 
+    }
     if (actualRow == finishRow && actualColumn == finishColumn) {
         return path
     }
     else {
         move()
-        solveMaze()
+        solveMaze(intento + 1)
     }
 }
 
@@ -44,6 +50,8 @@ function move() {
         // TODO chequear que pasa cuando entra acá
         console.log("wtf")
         deadEnds.push([actualRow, actualColumn])
+        resetPositionToStart()
+        clearPath()
     }
     return newPosition
 }
@@ -99,4 +107,17 @@ function addPathToMaze() {
     return maze
 }
 
+function clearPath() {
+    for (let i = 0; i < path.length - 1; i++) {
+        maze[path[i][0]][path[i][1]] = c
+    }
+    path.length = 1
+}
+
+function resetPositionToStart() {
+    actualRow = mazeObject.startRow
+    actualColumn = mazeObject.startColumn
+}
+
+solveMaze(0)
 
