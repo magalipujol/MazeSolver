@@ -26,6 +26,11 @@ function addColorToHTML(htmlObject, tileValue) {
     }
 }
 
+
+// TODO print maze should only print the maze, not create it
+// printMazeInHTML should be addMazeToHTML or createMaze
+// and I should add another function that prints the maze
+
 function printMazeInHTML(maze, id) {
     for (let row of maze) {
         parent = document.getElementById(id)
@@ -59,9 +64,3 @@ function createDiv(className) {
 //  }, 1000);
 
 //  setTimeout(() => clearInterval(printMazeInLoop), 4000)
-
-
- function reloadIFrame() {
-    console.log('reloading..');
-    document.getElementById('iframe').contentWindow.location.reload();
-}

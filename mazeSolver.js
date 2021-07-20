@@ -1,5 +1,5 @@
 // TODO if I change this, main.js should display this maze
-let mazeObject = mazes.maze3
+let mazeObject = mazes.maze1
 //TODO seleccionar un array aleatorio de mazes object
 let maze = mazeObject.matrix
 let deadEnds = []

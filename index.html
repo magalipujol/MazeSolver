@@ -15,12 +15,22 @@
 </head>
 <body>
     <header>Maze solver Visualizer</header>
-    <iframe src="maze.html" frameborder="4" title="This is the maze" width="500" height="500"></iframe>
+    <iframe src="maze.html" frameborder="4" id="iframe" title="This is the maze" width="500" height="500"></iframe>
     <!-- <div id="maze"></div> -->
     <script src="mazeDatabase.js"></script>
     <script src="main.js"></script>
     <script src="mazeSolver.js"></script>
     <script src="asserts.js"></script>
+    <!-- <script>
+        window.setInterval(function() {
+            reloadIFrame()
+        }, 500);
+
+        function reloadIFrame() {
+            console.log('reloading..');
+            document.getElementById('iframe').contentWindow.location.reload();
+        }
+    </script> -->
 
 </body>
 </html>
