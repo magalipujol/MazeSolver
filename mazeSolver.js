@@ -1,4 +1,5 @@
-let mazeObject = mazes.maze1
+// TODO if I change this, main.js should display this maze
+let mazeObject = mazes.maze3
 //TODO seleccionar un array aleatorio de mazes object
 let maze = mazeObject.matrix
 let deadEnds = []
@@ -15,6 +16,7 @@ let finishColumn = mazeObject.endColumn
 // if the position is the same as the exit, the function returns the path
 // if not, the position changes, and check again if it's the exit
 function solveMaze(intento) { 
+    // this prevents infinite loop
     if (intento == 1000) {
         console.log("plop")
         return 
@@ -25,7 +27,6 @@ function solveMaze(intento) {
     else {
         move()
         setTimeout(() => solveMaze(intento + 1), 500)
-        
     }
 }
 
