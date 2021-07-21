@@ -40,5 +40,37 @@ p {
 
 .pure-u-1-12 {
     background-color: blue;
+}
+
+#maze {
+    position: center;
+    margin: auto;
+
+    /* DELETE border */
+    border: 3px solid green;
+    padding: 10px;
+    text-align: center;
+    width: 40%;
+    padding-top: 3%;
+    padding-left: 18%;
+}
+
+header {
+    font-family: 'Zen Tokyo Zoo', cursive;
+    margin: auto;
+       /* DELETE border */
+    border: 3px solid green;
+    padding: 10px;
+    font-size: 100px;
+    text-align: center;
+    background-color: var(--mustard);
+}
+
+footer {
+    text-align: center;
+    margin-top: 11%;
+    padding: 1%;
+    background-color: #e76f51;
+    font-family: 'Source Sans Pro', sans-serif;
     
 }
